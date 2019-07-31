@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Menu from './Menu'
+import Slider from './Slider'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const menuPoints = [
+  {
+    id: 1,
+    name: 'Name №1',
+    icon: 'icon_src_1.png'
+  },
+  {
+    id: 2,
+    name: 'Name №2',
+    icon: 'icon_src_2.png'
+  },
+  {
+    id: 3,
+    name: 'Name №3',
+    icon: 'icon_src_3.png'
+  },
+  {
+    id: 4,
+    name: 'Name №4',
+    icon: 'icon_src_4.png'
+  }
+]
+
+class App extends React.Component {
+
+  render(){
+    
+
+    return (
+      <React.Fragment>
+        <Menu data={menuPoints} />
+        <Slider />
+      </React.Fragment>
+    )
+
+  }
+
 }
 
 export default App;
